@@ -117,14 +117,14 @@
 }
 
 .meal-btn--reject {
-  background: #EDE5D5;
-  color: #1C1C1E;
+  background: #ef4444;
+  color: white;
   border-right: 1px solid #DDD6CC;
 }
 
 .meal-btn--reject:hover {
-  background: rgba(239,68,68,0.08);
-  color: #ef4444;
+  background: #b91c1c;
+  color: white;
 }
 
 .meal-btn--approve {
@@ -246,5 +246,5 @@
 .btn--approve { background: #3DBF52; color: white; }
 .btn--approve:hover { background: #0D3018; }
 
-.btn--reject { background: #EDE5D5; color: #1C1C1E; }
-.btn--reject:hover { background: rgba(239,68,68,0.08); color: #ef4444; }
+.btn--reject { background: #ef4444; color: white; }
+.btn--reject:hover { background: #b91c1c; color: white; }

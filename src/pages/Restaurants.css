@@ -62,7 +62,7 @@
   transition: background 0.15s;
 }
 
-.rest-row:hover { background: #F5EDE0; }
+.rest-row:hover { background: white; }
 
 .rest-avatar {
   width: 40px;
