@@ -117,8 +117,8 @@ function Overview() {
           )}
           {recentApps.map(r => (
             <div key={r.id} className="activity-row">
-              <div className="activity-icon">
-                <Store size={15} color="#9A9A9A" />
+              <div className="activity-icon" style={{ background: r.logoColor + '22', color: r.logoColor, fontWeight: 700, fontSize: '12px', padding: 0 }}>
+                {r.logo}
               </div>
               <div className="activity-info">
                 <span className="activity-name">{r.name}</span>
