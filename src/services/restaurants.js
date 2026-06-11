@@ -46,7 +46,7 @@ function mapApplication(app) {
  */
 export async function listApplications({ status = '', page = 1, pageSize = 10 } = {}) {
   const params = new URLSearchParams({ Page: page, PageSize: pageSize });
-  if (status) params.set('Status', status);
+  if (status) params.set('Status', status.charAt(0).toUpperCase() + status.slice(1));
   const res = await api.get(`/v1/restaurant-applications?${params}`);
   const raw = Array.isArray(res) ? res : (res.items ?? res.data ?? []);
   return {

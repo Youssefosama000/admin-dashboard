@@ -17,9 +17,9 @@ function Overview() {
       // recent apps list (first page, default size)
       listApplications({ page: 1, pageSize: 10 }),
       // pending count only (pageSize:1 is enough to get `total`)
-      listApplications({ page: 1, pageSize: 1, status: 'pending' }),
+      listApplications({ page: 1, pageSize: 1, status: 'Pending' }),
       // approved count only
-      listApplications({ page: 1, pageSize: 1, status: 'approved' }),
+      listApplications({ page: 1, pageSize: 1, status: 'Approved' }),
       getUnreviewedMeals(),
       getPendingBranches(),
     ]).then(([recentRes, pendingRes, approvedRes, mealsRes, branchesRes]) => {
