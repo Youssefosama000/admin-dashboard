@@ -1,0 +1,243 @@
+.rest-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── flow banner ── */
+.flow-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border-radius: 16px;
+  padding: 14px 18px;
+  border: 1px solid #DDD6CC;
+  flex-wrap: wrap;
+}
+
+.flow-step {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9A9A9A;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: #EDE5D5;
+}
+
+.flow-step--done {
+  background: rgba(61,191,82,0.12);
+  color: #166534;
+}
+
+.flow-step--active {
+  background: rgba(245,158,11,0.12);
+  color: #B45309;
+}
+
+.flow-arrow {
+  font-size: 12px;
+  color: #DDD6CC;
+}
+
+/* ── restaurant list ── */
+.rest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rest-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.rest-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.rest-row:hover { background: #F5EDE0; }
+
+.rest-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rest-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.rest-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1C1C1E;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rest-meta {
+  font-size: 12px;
+  color: #9A9A9A;
+}
+
+/* ── badges ── */
+.badge {
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge--approved { background: rgba(61,191,82,0.12);  color: #166534; }
+.badge--pending  { background: rgba(245,158,11,0.12); color: #B45309; }
+.badge--rejected { background: rgba(239,68,68,0.12);  color: #B91C1C; }
+
+/* ── activate button ── */
+.activate-btn {
+  background: #3DBF52;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.activate-btn:hover:not(:disabled) { background: #0D3018; }
+.activate-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* ── expanded branch section ── */
+.branches-section {
+  border-top: 1px solid #DDD6CC;
+  background: #F5EDE0;
+}
+
+.branches-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #9A9A9A;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 12px 20px 6px;
+}
+
+.branch-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  border-top: 1px solid #DDD6CC;
+}
+
+.branch-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.branch-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1C1C1E;
+}
+
+.branch-address {
+  font-size: 11px;
+  color: #9A9A9A;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── section headers ── */
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1C1C1E;
+  margin: 0 0 2px;
+}
+
+.section-sub {
+  font-size: 12px;
+  color: #9A9A9A;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── utility ── */
+.center-msg {
+  text-align: center;
+  padding: 32px;
+  color: #9A9A9A;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px 0;
+  color: #9A9A9A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.refresh-btn {
+  font-size: 12px;
+  color: #9A9A9A;
+  background: none;
+  border: 1px solid #DDD6CC;
+  border-radius: 8px;
+  padding: 5px 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.refresh-btn:hover { background: #EDE5D5; }
+
+.retry-btn {
+  color: #3DBF52;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}

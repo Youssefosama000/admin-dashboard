@@ -1,0 +1,38 @@
+.app-shell {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 24px 24px;
+  background-color: #F5EDE0;
+}
+
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 9999;
+  white-space: nowrap;
+  width: fit-content;
+  max-width: 90vw;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  pointer-events: none;
+}
+.toast--success { background: #0D3018; color: #3DBF52; }
+.toast--error   { background: #450A0A; color: #FCA5A5; }

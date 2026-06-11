@@ -1,0 +1,132 @@
+.sidebar {
+  width: 230px;
+  min-width: 230px;
+  height: 100vh;
+  background: white;
+  border-right: 1px solid #DDD6CC;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 18px 20px 12px;
+}
+
+.sidebar-logo-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.sidebar-logo-text {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1C1C1E;
+}
+
+.sidebar-badge {
+  font-size: 9px;
+  font-weight: 700;
+  color: #3DBF52;
+  background: rgba(61, 191, 82, 0.12);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.sidebar-hr {
+  border: none;
+  border-top: 1px solid #DDD6CC;
+  margin: 4px 0;
+}
+
+.sidebar-section-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #9A9A9A;
+  letter-spacing: 1px;
+  padding: 6px 20px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 10px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1C1C1E;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.sidebar-item:hover {
+  background: #F5EDE0;
+}
+
+.sidebar-item--active {
+  background: #3DBF52;
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+}
+
+.sidebar-user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(61, 191, 82, 0.15);
+  color: #3DBF52;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar-user-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1C1C1E;
+}
+
+.sidebar-user-email {
+  font-size: 11px;
+  color: #9A9A9A;
+}
+
+.sidebar-logout {
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  color: #9A9A9A;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-logout:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
