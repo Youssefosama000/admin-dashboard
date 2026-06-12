@@ -2,9 +2,9 @@ import { NavLink } from 'react-router-dom'
 import { LayoutDashboard, Store, Zap, UtensilsCrossed, LogOut } from 'lucide-react'
 import './Sidebar.css'
 
-function Sidebar({ user, onLogout }) {
+function Sidebar({ user, onLogout, isOpen, onClose }) {
   return (
-    <div className="sidebar">
+    <div className={`sidebar${isOpen ? ' sidebar--open' : ''}`}>
 
       <div className="sidebar-logo">
         <img src="/greenLogo.png" alt="Slyce" className="sidebar-logo-img" />
@@ -17,16 +17,16 @@ function Sidebar({ user, onLogout }) {
       <p className="sidebar-section-label">MAIN MENU</p>
 
       <nav className="sidebar-nav">
-        <NavLink to="/" end className={({ isActive }) => isActive ? 'sidebar-item sidebar-item--active' : 'sidebar-item'}>
+        <NavLink to="/" end onClick={onClose} className={({ isActive }) => isActive ? 'sidebar-item sidebar-item--active' : 'sidebar-item'}>
           <LayoutDashboard size={16} /> Dashboard
         </NavLink>
-        <NavLink to="/restaurants" className={({ isActive }) => isActive ? 'sidebar-item sidebar-item--active' : 'sidebar-item'}>
+        <NavLink to="/restaurants" onClick={onClose} className={({ isActive }) => isActive ? 'sidebar-item sidebar-item--active' : 'sidebar-item'}>
           <Store size={16} /> Restaurant Applications
         </NavLink>
-        <NavLink to="/activate" className={({ isActive }) => isActive ? 'sidebar-item sidebar-item--active' : 'sidebar-item'}>
+        <NavLink to="/activate" onClick={onClose} className={({ isActive }) => isActive ? 'sidebar-item sidebar-item--active' : 'sidebar-item'}>
           <Zap size={16} /> Activate Restaurants
         </NavLink>
-        <NavLink to="/meals" className={({ isActive }) => isActive ? 'sidebar-item sidebar-item--active' : 'sidebar-item'}>
+        <NavLink to="/meals" onClick={onClose} className={({ isActive }) => isActive ? 'sidebar-item sidebar-item--active' : 'sidebar-item'}>
           <UtensilsCrossed size={16} /> Meals Approval
         </NavLink>
       </nav>

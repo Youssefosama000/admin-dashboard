@@ -248,3 +248,7 @@
 
 .btn--reject { background: #ef4444; color: white; }
 .btn--reject:hover { background: #b91c1c; color: white; }
+
+@media (max-width: 600px) {
+  .meals-grid { grid-template-columns: 1fr; }
+}

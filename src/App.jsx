@@ -12,11 +12,14 @@ import { session } from './services/api';
 import { logout as apiLogout } from './services/auth';
 
 function DashboardShell({ user, onLogout }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
   return (
     <div className="app-shell">
-      <Sidebar user={user} onLogout={onLogout} />
+      <Sidebar user={user} onLogout={onLogout} isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      {sidebarOpen && <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)} />}
       <div className="app-main">
-        <TopBar user={user} onLogout={onLogout} />
+        <TopBar user={user} onMenuToggle={() => setSidebarOpen(o => !o)} />
         <main className="app-content">
           <Routes>
             <Route path="/"            element={<Overview />}               />

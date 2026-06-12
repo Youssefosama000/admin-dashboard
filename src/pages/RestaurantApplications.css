@@ -234,3 +234,8 @@
 
 .btn--reject { background: #EDE5D5; color: #1C1C1E; }
 .btn--reject:hover { background: rgba(239,68,68,0.1); color: #ef4444; }
+
+@media (max-width: 768px) {
+  .table-card { overflow-x: auto; }
+  .modal { max-height: 90vh; margin: 5vh auto; width: 94vw; }
+}

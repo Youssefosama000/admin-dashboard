@@ -18,6 +18,21 @@
   background-color: #F5EDE0;
 }
 
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .app-content { padding: 8px 16px 24px; }
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 999;
+  }
+}
+
 .toast {
   position: fixed;
   bottom: 28px;

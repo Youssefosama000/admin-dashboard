@@ -1,8 +1,8 @@
 import { useLocation } from 'react-router-dom'
-import { Search, Bell } from 'lucide-react'
+import { Search, Bell, Menu } from 'lucide-react'
 import './TopBar.css'
 
-function TopBar() {
+function TopBar({ onMenuToggle }) {
   const location = useLocation()
 
   let title = 'Dashboard'
@@ -12,6 +12,9 @@ function TopBar() {
 
   return (
     <div className="topbar">
+      <button className="topbar-hamburger" onClick={onMenuToggle}>
+        <Menu size={20} color="#1C1C1E" />
+      </button>
       <h1 className="topbar-title">{title}</h1>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
