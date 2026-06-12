@@ -45,32 +45,137 @@
   font-size: 14px;
 }
 
+.notif-wrap {
+  position: relative;
+}
+
 .topbar-notif {
   position: relative;
   width: 32px;
   height: 32px;
   background: transparent;
+  border: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
   cursor: pointer;
 }
 
-.topbar-notif:hover {
-  background: #EDE5D5;
+.topbar-notif:hover { background: #EDE5D5; }
+
+.notif-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  min-width: 16px;
+  height: 16px;
+  background: #ef4444;
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: 1.5px solid #F5EDE0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+  line-height: 1;
 }
 
-.notif-dot {
+/* ── dropdown ── */
+.notif-dropdown {
   position: absolute;
-  top: 7px;
-  right: 7px;
-  width: 7px;
-  height: 7px;
-  background: #ef4444;
-  border-radius: 50%;
-  border: 1.5px solid white;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 300px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  z-index: 9000;
+  overflow: hidden;
+}
+
+.notif-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid #EDE5D5;
+}
+
+.notif-header-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1C1C1E;
+}
+
+.notif-header-count {
+  font-size: 11px;
+  font-weight: 600;
+  color: #9A9A9A;
+}
+
+.notif-empty {
+  font-size: 13px;
+  color: #9A9A9A;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.notif-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 11px 16px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #F5EDE0;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s;
+}
+
+.notif-item:last-child { border-bottom: none; }
+.notif-item:hover { background: #F5EDE0; }
+
+.notif-item-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notif-item-icon--restaurant { background: rgba(61,191,82,0.12);  color: #3DBF52; }
+.notif-item-icon--meal       { background: rgba(245,158,11,0.12); color: #B45309; }
+
+.notif-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.notif-item-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1C1C1E;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notif-item-sub {
+  font-size: 11px;
+  color: #9A9A9A;
+}
+
+@media (max-width: 480px) {
+  .notif-dropdown { width: calc(100vw - 32px); right: -40px; }
 }
 
 .topbar-avatar {
