@@ -196,7 +196,7 @@ function RestaurantApplications() {
       )}
 
       {/* Detail modal */}
-      {selected && (
+      {selected && createPortal(
         <div className="modal-overlay" onClick={() => { setSelected(null); setShowRejectInput(false); setRejectReason('') }}>
           <div className="modal" onClick={e => e.stopPropagation()}>
 
@@ -268,7 +268,8 @@ function RestaurantApplications() {
               )}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   )

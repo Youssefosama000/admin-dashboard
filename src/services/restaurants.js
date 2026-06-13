@@ -199,7 +199,9 @@ function mapMeal(m) {
     calories:       firstSize?.calories ?? m.smallestSizeKcal ?? null,
     price:          minPrice,
     sizes,
-    ingredients:    Array.isArray(m.ingredients) ? m.ingredients : [],
+    ingredients:    Array.isArray(m.ingredients)
+      ? m.ingredients.map(ing => typeof ing === 'string' ? ing : (ing.name ?? ing.ingredient ?? ing.label ?? String(ing)))
+      : [],
     category:       m.categoryName ?? m.category ?? '',
     status:         'pending',
     submittedAt:    (m.createdAt ?? m.submittedAt ?? '').slice(0, 10),

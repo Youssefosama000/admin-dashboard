@@ -176,14 +176,15 @@ function MealsApproval() {
         </>
       )}
 
-      {selected && (
+      {selected && createPortal(
         <MealModal
           meal={{ ...selected, ...(selectedDetail ?? {}) }}
           loading={detailLoading}
           onClose={() => { setSelected(null); setSelectedDetail(null) }}
           onApprove={approve}
           onReject={reject}
-        />
+        />,
+        document.body
       )}
     </div>
   )
