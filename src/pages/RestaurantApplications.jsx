@@ -264,6 +264,11 @@ function RestaurantApplications() {
               ) : (
                 <p style={{ fontSize: '13px', color: '#9A9A9A' }}>
                   This application has been <strong>{selected.status}</strong>.
+                  {selected.status === 'approved' && (
+                    <span style={{ display: 'block', marginTop: '4px', fontSize: '12px' }}>
+                      Go to <strong>Activate Restaurants</strong> to activate the restaurant and its branches.
+                    </span>
+                  )}
                 </p>
               )}
             </div>

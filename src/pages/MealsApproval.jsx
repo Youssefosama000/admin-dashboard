@@ -28,12 +28,9 @@ function MealsApproval() {
     setLoading(true)
     setError(null)
     try {
-      const pending  = await getUnreviewedMeals()
+      const pending    = await getUnreviewedMeals()
       const pendingIds = new Set(pending.map(m => m.id))
-
-      // merge with locally-stored reviewed meals (exclude any that are back in pending)
-      const reviewed = Object.values(loadReviewed()).filter(m => !pendingIds.has(m.id))
-
+      const reviewed   = Object.values(loadReviewed()).filter(m => !pendingIds.has(m.id))
       setMeals([...pending, ...reviewed])
     } catch (err) {
       setError(err.message ?? 'Failed to load meals')
